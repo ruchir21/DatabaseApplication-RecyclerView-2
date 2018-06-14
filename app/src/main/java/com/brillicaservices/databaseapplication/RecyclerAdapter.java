@@ -17,16 +17,9 @@ public class RecyclerAdapter  extends
         RecyclerView.Adapter<RecyclerAdapter.StudentViewHolder> {
 
     private static final String TAG = RecyclerAdapter.class.getName();
-
-    private final ListItemClickListener itemClickListener;
-
     private static int viewHolderCount;
-
+    private final ListItemClickListener itemClickListener;
     private ArrayList<StudentData> studentArrayList;
-
-    public interface ListItemClickListener {
-        void onListItemClickListener(int clickedItemIndex);
-    }
 
     public RecyclerAdapter(ArrayList<StudentData> studentArrayList,
                            ListItemClickListener itemClickListener) {
@@ -56,16 +49,20 @@ public class RecyclerAdapter  extends
                                  int position) {
         StudentData student = studentArrayList.get(position);
 
-        holder.studentId.setText("Id is: "+ student.getId());
+        //holder.studentId.setText("Id is: "+ student.getId());
         holder.studentName.setText("Name is: " + student.getName());
-        holder.studentAddress.setText("Address is: " + student.getAddress());
+        //holder.studentAddress.setText("Address is: " + student.getAddress());
         holder.studentCollege.setText("College is: " + student.getCollegeName());
-        holder.studentPhone.setText("PhoneNumber is: " + student.getPhoneNumber());
+        //holder.studentPhone.setText("PhoneNumber is: " + student.getPhoneNumber());
     }
 
     @Override
     public int getItemCount() {
         return studentArrayList.size();
+    }
+
+    public interface ListItemClickListener {
+        void onListItemClickListener(int clickedItemIndex);
     }
 
     public class StudentViewHolder extends
@@ -83,11 +80,11 @@ public class RecyclerAdapter  extends
 
         public StudentViewHolder(View itemView) {
             super(itemView);
-            studentId=itemView.findViewById(R.id.student_id);
+            // studentId=itemView.findViewById(R.id.student_id);
             studentName = itemView.findViewById(R.id.student_name);
-            studentAddress = itemView.findViewById(R.id.student_address);
+            //studentAddress = itemView.findViewById(R.id.student_address);
             studentCollege = itemView.findViewById(R.id.student_college);
-            studentPhone = itemView.findViewById(R.id.student_phone);
+            //studentPhone = itemView.findViewById(R.id.student_phone);
            // recyclerNumber = itemView.findViewById(R.id.recycler_number);
 
             itemView.setOnClickListener(this);

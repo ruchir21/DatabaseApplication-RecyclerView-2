@@ -1,18 +1,10 @@
 package com.brillicaservices.databaseapplication;
 
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.database.CharArrayBuffer;
-import android.database.ContentObserver;
-import android.database.Cursor;
-import android.database.DataSetObserver;
-import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -50,13 +42,13 @@ public class DisplayStudent_activity extends AppCompatActivity  implements Recyc
             result.setText(result.getText() + "****************\n\n");*/
 
 
-            LinearLayoutManager linearLayoutManager =
-                    new LinearLayoutManager(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
             rv.setLayoutManager(linearLayoutManager);
 
             rv.setHasFixedSize(true);
             recyclerAdapter = new RecyclerAdapter(studentArrayList, this);
             rv.setAdapter(recyclerAdapter);
+        recyclerAdapter.notifyDataSetChanged();
 
         }
 

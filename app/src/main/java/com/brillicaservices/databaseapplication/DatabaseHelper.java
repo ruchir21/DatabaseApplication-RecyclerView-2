@@ -143,13 +143,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return sqLiteDatabase.update(TABLE_NAME, values, STUDENT_ID + " = ?",
                 new String[]{String.valueOf(StudentData.getId())});
     }
-    public void deleteAll()
-    {
-        SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
-
-        sqLiteDatabase.execSQL(" delete from "+TABLE_NAME);
-        sqLiteDatabase.close();
-    }
 
 }
 

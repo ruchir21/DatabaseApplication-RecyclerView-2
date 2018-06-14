@@ -22,8 +22,10 @@
         <activity
             android:name=".DisplayStudent_activity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".ListIntentActivity"
-            android:parentActivityName=".DisplayStudent_activity"></activity>
+        <activity
+            android:name=".ListIntentActivity"
+            android:parentActivityName=".DisplayStudent_activity" />
+        <activity android:name=".testing"></activity>
     </application>
 
 </manifest>
