@@ -112,7 +112,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         sqLiteDatabase.close();
-
         return  studentsList;
     }
 

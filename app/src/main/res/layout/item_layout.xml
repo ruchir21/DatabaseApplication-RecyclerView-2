@@ -16,7 +16,6 @@
         android:id="@+id/student_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:autoSizeMaxTextSize="..dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
     <TextView
